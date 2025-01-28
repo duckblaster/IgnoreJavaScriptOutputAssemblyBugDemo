@@ -1,0 +1,11 @@
+<Project>
+  <Target Name="IgnoreJavaScriptOutputAssembly"
+    BeforeTargets="ResolvePackageDependenciesForBuild"
+    AfterTargets="IncludeTransitiveProjectReferences">
+      <ItemGroup>
+        <ProjectReference Condition="'%(ProjectReference.Extension)' == '.esproj' and '%(ProjectReference.ReferenceOutputAssembly)' == ''">
+          <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+        </ProjectReference>
+      </ItemGroup>
+  </Target>
+</Project>
