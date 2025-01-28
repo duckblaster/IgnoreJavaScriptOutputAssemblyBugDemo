@@ -4,8 +4,9 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc --build",
-    "clean": "tsc --build --clean"
+    "build": "build:Debug",
+    "build:Debug": "tsc",
+    "build:Release": "tsc"
   },
   "keywords": [],
   "author": "",

@@ -1,3 +1,10 @@
-<Project Sdk="Microsoft.VisualStudio.JavaScript.Sdk/1.0.1738743">
-
+﻿<Project Sdk="Microsoft.VisualStudio.JavaScript.Sdk/1.0.2302760">
+  <PropertyGroup>
+    <!-- Folder where production build objects will be placed -->
+    <BuildOutputFolder>obj\$(Configuration)\dist</BuildOutputFolder>
+    <DebugAssetsDirectory>obj\$(Configuration)\dist</DebugAssetsDirectory>
+    <PublishAssetsDirectory>obj\$(Configuration)\dist</PublishAssetsDirectory>
+    <BuildCommand>npm run build:$(Configuration) -- --outDir obj\$(Configuration)\dist</BuildCommand>
+    <StaticWebAssetSourceId>DemoApp.Shared.Webpack</StaticWebAssetSourceId>
+  </PropertyGroup>
 </Project>
